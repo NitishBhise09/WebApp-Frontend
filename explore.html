@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic page</title>
+    <link rel="stylesheet" href="explorestyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/boo/image-removebg-preview (1).png.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<script src="explore.js" defer></script>
+
+<body>
+
+
+    <section class="body_explore">
+        <!-- ==========================categories page======================= -->
+
+        <div class="categories_main">
+            <nav class="navbar_cart">
+                <a href="#" onclick="homepage()"><i class="fa-solid fa-arrow-left icons"></i></a>
+                <input type="text" name="search" id="search" placeholder="search" class="search_cart">
+                <i class="fa-solid fa-magnifying-glass icons"></i>
+            </nav>
+
+            <div class="cart_head">
+                <img src="images/cart_head.png" alt="cart_head">
+                <div class="cart_head_title">
+
+                    <div class="dropdown">
+                        <button class="category_title dp_head">Snacks & Beverages<span><i
+                                    class="fa-solid fa-chevron-down icons"></i></span></button>
+
+                        <div class="dropdown_content">
+                            <button class="category_title list_item-1" onclick="showDP('list_item-1')">Most
+                                common</button>
+                            <button class="category_title list_item-2"
+                                onclick="showDP('list_item-2')">Breakfast</button>
+                        </div>
+                    </div>
+
+                    <p class="cart_below_title">Urban Bazaar</p>
+
+                </div>
+            </div>
+            <div class="switch_categories">
+                <button class="switch active">All</button>
+                <button class="switch">Best Sellers</button>
+                <button class="switch">Chips & Wafers</button>
+                <button class="switch">Soft Drinks</button>
+                <button class="switch">Poison</button>
+            </div>
+        </div>
+
+
+
+        <div class="main_explore">
+
+            <nav class="navbar">
+                <h1 class="head">Urban Bazaar</h1>
+                <input style="display: none" type="text" name="search" id="search" placeholder="search" class="search">
+
+                <div class="nav_icons">
+                    <img class="navicons" src="ui_components/search.png" alt="search">
+                    <img class="navicons" src="ui_components/user.png" alt="user">
+                </div>
+            </nav>
+
+            <div class="child_exlpore list-active--1">
+                <div class="card_section">
+                    <h3 class="sub_head">
+                        Most Popular
+                    </h3>
+                    <hr class="line" />
+
+                    <a href="#" class="view_all" data-btn-num="1">VIEW ALL</a>
+                </div>
+                <div class="items" id="most_popular">
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img1" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1','product_img1','product_name1','amount1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name1 product_name">Fruits</p>
+                        <p class="amount1 amount">900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money1">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/sweet.png" class="product_img2" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price2','total_price','total_items','saved_money','save_money2','product_img2 ','product_name2','amount2')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name2 product_name">Sweets</p>
+                        <p class="amount2 amount">1200gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price2" value="220">220</span></p>
+                            <p class="offer">
+                                <span class="overline">₹300</span>
+                                <span class="save">Save ₹<span class="save_money2">15</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/spicy.png" class="product_img3" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price3','total_price','total_items','saved_money','save_money3','product_img3','product_name3','amount3')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name3 product_name">Snacks & Drink</p>
+                        <p class="amount3 amount">900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price3" value="50">50</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money3">7</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img4" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price4','total_price','total_items','saved_money','save_money4','product_img4','product_name4','amount4')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name4 product_name">White Button Mushroom</p>
+                        <p class="amount4 amount">900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price4" value="98">330</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money4">25</span></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dairy Products=============== -->
+            <div class="child_exlpore list-active--2">
+                <div class="card_section">
+                    <h3 class="sub_head">
+                        Dairy Products
+                    </h3>
+                    <hr class="line" />
+
+                    <a href="#" class="view_all" data-btn-num="2">VIEW ALL</a>
+                </div>
+                <div class="items" id="dairy_products">
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">Dairy</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/Image 5.png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">Last Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instant Foods=============== -->
+            <div class="child_exlpore list-active--3">
+                <div class="card_section">
+                    <h3 class="sub_head">
+                        Instant Foods
+                    </h3>
+                    <hr class="line" />
+
+                    <a href="#" class="view_all" data-btn-num="3">VIEW ALL</a>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instant Foods=============== -->
+            <div class="child_exlpore list-active--4">
+                <div class="card_section">
+                    <h3 class="sub_head">
+                        Instant Foods
+                    </h3>
+                    <hr class="line" />
+
+                    <a href="#" class="view_all" data-btn-num="4">VIEW ALL</a>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Care================================ -->
+            <div class="child_exlpore list-active--5">
+                <div class="card_section">
+                    <h3 class="sub_head">
+                        Personal Care
+                    </h3>
+                    <hr class="line" />
+
+                    <a href="#" class="view_all" data-btn-num="5">VIEW ALL</a>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breakfast & Dairy =============== -->
+            <div class="child_exlpore list-active--6">
+                <div class="card_section">
+                    <h3 class="sub_head">
+                        Breakfast & Dairy
+                    </h3>
+                    <hr class="line" />
+
+                    <a href="#" class="view_all" data-btn-num="6">VIEW ALL</a>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/image-removebg-preview (1).png" class="product_img" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹<span class="price1" value="98">98</span></p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹<span class="save_money">5</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/Component_66___1-removebg-preview.png" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>
+                        
+                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹98</p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹5</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <div class="image">
+                                <img src="images/Component_66___1-removebg-preview.png" alt="">
+                                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                </img>
+                            </div>
+                            <button class="add"
+                                onclick="add_product('price1','total_price','total_items','saved_money','save_money1')"><i class="fa-solid fa-plus"></i></button>
+                            </img>
+                        </div>                        <p class="product_name product_name">White Button Mushroom</p>
+                        <p class="amount" amount>900gm</p>
+                        <div class="price_offer">
+                            <p class="price">₹98</p>
+                            <p class="offer">
+                                <span class="overline">₹103</span>
+                                <span class="save">Save ₹5</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===================================================================
+            ====================================================Open Cart page================================ -->
+
+        <div class="cart_parent_explore">
+
+            <nav class="navbar_cart">
+                <a href="#" onclick="homepage()"><i class="fa-solid fa-arrow-left icons"></i></a>
+                <input type="text" name="search" id="search" placeholder="search" class="search_cart">
+                <i class="fa-solid fa-magnifying-glass icons"></i>
+            </nav>
+
+            <div class="cart_head">
+                <img src="images/cart_head.png" alt="cart_head">
+                <div class="cart_head_title">
+                    <h1 class="cart_title">Cart</h1>
+                    <p class="cart_below_title">Urban Bazaar</p>
+                </div>
+
+            </div>
+
+            <!-- ===============demo cart item================ -->
+
+            <div class="cart_list_items">
+                <div class="empty_div">
+                    <h3 class="empty_cart">Cart is empty !</h3>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+    <!-- =====================footer===================== -->
+    <footer>
+        <!-- ===========================cart bottom======================== -->
+        <div class="cart_bottom">
+            <div class="left_cart">
+                <a href="#cart" class="cart_icon">
+                    <img src="images/cart.png" alt="cart" class="cart_icon">
+                </a>
+                <span class="item_list"><span class="total_items">0</span> Items</span>
+                <p class="saved">₹<span class="saved_money">0</span> SAVED</p>
+            </div>
+            <div class="right_cart">
+                <a href="#pay" class="pay">PAY ₹<span class="total_price">0</span></a>
+            </div>
+        </div>
+
+
+        <!-- ===========bottom nav============= -->
+        <div class="bottom_div">
+            <a href="#" onclick="opencart()" class="bottom_nav_icons">
+                <img src="images/cart.png" alt="cart" class="image_icons">
+                <p class="label">CART</p>
+                </img>
+            </a>
+            <a href="#" class="bottom_nav_icons">
+                <img src="images/scan.png" alt="cart" class="image_icons">
+                <p class="label">SCAN & CO</p>
+                </img>
+            </a>
+            <a href="#" class="bottom_nav_icons">
+                <img src="images/payment.png" alt="cart" class="image_icons">
+                <p class="label">E-STORE</p>
+                </img>
+            </a>
+            <a href="#" class="bottom_nav_icons">
+                <img src="images/shop.png" alt="cart" class="image_icons">
+                <p class="label">ORDERS</p>
+                </img>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
